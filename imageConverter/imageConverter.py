@@ -43,44 +43,43 @@ for file in os.listdir(directory5):
         cnt1=cnt1+1
 print("locDone")
 cnt1=0
-if(0==0):
-    for file in os.listdir(directory):
-        nam=os.fsdecode(file)
-        fileName=dirstr+"/"+nam
-        #filePath="/imgs"
-        im = Image.open(fileName)
-        im=im.resize((a,v))
-        rgbIm=im.convert("RGB")
-        length,width=rgbIm.size;
-        print(str(length)+" "+str(width) )
-        f=open("cubes/"+str(cnt1),"w+")
-        f.write("1,")
-        for i in range(0,length):
-            for j in range(0,width):    
-                r,g,b=rgbIm.getpixel((i,j))
-                f.write(str(r)+","+str(g)+","+str(b)+",")
-            f.write("\n")
-        f.close()
-        cnt1=cnt1+1
-    print("trt1")
-    for file in os.listdir(directory2):
-        nam=os.fsdecode(file)
-        fileName=dirstr2+"/"+nam
-        #filePath="/imgs"
-        im = Image.open(fileName)
-        im=im.resize((a,v))        
-        rgbIm=im.convert("RGB")
-        length,width=rgbIm.size;
-        print(str(length)+" "+str(width))
-        f=open("cubes/"+str(cnt1),"w+")
-        f.write("0,")
-        for i in range(0,length):
-            for j in range(0,width):    
-                r,g,b=rgbIm.getpixel((i,j))
-                f.write(str(r)+","+str(g)+","+str(b)+",")
-            f.write("\n")
-        f.close()
-        cnt1=cnt1+1
+for file in os.listdir(directory):
+    nam=os.fsdecode(file)
+    fileName=dirstr+"/"+nam
+    #filePath="/imgs"
+    im = Image.open(fileName)
+    im=im.resize((a,v))
+    rgbIm=im.convert("RGB")
+    length,width=rgbIm.size;
+    print(str(length)+" "+str(width) )
+    f=open("cubes/"+str(cnt1),"w+")
+    f.write("1,")
+    for i in range(0,length):
+        for j in range(0,width):    
+            r,g,b=rgbIm.getpixel((i,j))
+            f.write(str(r)+","+str(g)+","+str(b)+",")
+        f.write("\n")
+    f.close()
+    cnt1=cnt1+1
+print("trt1")
+for file in os.listdir(directory2):
+    nam=os.fsdecode(file)
+    fileName=dirstr2+"/"+nam
+    #filePath="/imgs"
+    im = Image.open(fileName)
+    im=im.resize((a,v))        
+    rgbIm=im.convert("RGB")
+    length,width=rgbIm.size;
+    print(str(length)+" "+str(width))
+    f=open("cubes/"+str(cnt1),"w+")
+    f.write("0,")
+    for i in range(0,length):
+        for j in range(0,width):    
+            r,g,b=rgbIm.getpixel((i,j))
+            f.write(str(r)+","+str(g)+","+str(b)+",")
+        f.write("\n")
+    f.close()
+    cnt1=cnt1+1
 print("trf1")
 
 b=True
